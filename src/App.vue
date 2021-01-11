@@ -4,7 +4,8 @@
     <p class="start-screen__sub-title">Test your reaction time</p>
     <button class="start-screen__start-btn" @click="startGame">Start Game</button>
   </div>
-  <Game v-if="showGameScreen" :delay="delay" />
+  <Game v-if="showGameScreen" :delay="delay" @end="endGame" />
+  <Result v-if="showResult" :finalResult="result" />
 </template>
 
 <script>
@@ -15,14 +16,16 @@ export default {
   name: 'App',
   components: {
     Game,
-    // Result
+    Result
   },
 
   data() {
     return {
       showStartScreen: true,
       showGameScreen: false,
-      delay: null
+      showResult: false,
+      delay: null,
+      result: null
     }
   },
 
@@ -31,7 +34,14 @@ export default {
       this.showStartScreen = false
       this.showGameScreen = true
       this.delay = Math.floor(2000 + (Math.random() * 3000))
-      // console.log(this.delay)
+      console.log(this.showGameScreen)
+    },
+
+    endGame(reactionTime, clickNow) {
+      this.result = reactionTime
+      this.showGameScreen = clickNow
+      this.showResult = true
+      console.log('clicked')
     }
   }
 }

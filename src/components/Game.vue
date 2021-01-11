@@ -8,10 +8,10 @@
 export default {
 	data() {
 		return {
-			message: 'Click anywhere when the color change to green',
+			message: 'Click anywhere when the background color change',
 			timer: null,
 			reactionTime: 0,
-			clickNow: false
+			clickNow: false,
 		}
 	},
 
@@ -23,20 +23,21 @@ export default {
 		this.timer = setTimeout(() => {
 			this.message = 'Click Now'
 			this.clickNow = true
+			this.startTimer()
 		}, this.delay)
 	},
 
-	updated() {
-		clearTimeout(this.timer)
-		this.timer = setInterval(() => {
-			this.reactionTime += 10
-		}, 10)
-		console.log('component updated')
-	},
-
 	methods: {
+		startTimer() {
+			// clearTimeout(this.timer)
+			this.timer = setInterval(() => {
+				this.reactionTime += 10
+			}, 10)
+		},
+
 		react() {
 			clearInterval(this.timer)
+			this.$emit('end', this.reactionTime)
 			console.log(this.reactionTime)
 		}
 	}
