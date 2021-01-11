@@ -4,7 +4,7 @@
     <p class="start-screen__sub-title">Test your reaction time</p>
     <button class="start-screen__start-btn" @click="startGame">Start Game</button>
   </div>
-  <Game v-if="showGameScreen" />
+  <Game v-if="showGameScreen" :delay="delay" />
 </template>
 
 <script>
@@ -21,7 +21,8 @@ export default {
   data() {
     return {
       showStartScreen: true,
-      showGameScreen: false
+      showGameScreen: false,
+      delay: null
     }
   },
 
@@ -29,6 +30,8 @@ export default {
     startGame() {
       this.showStartScreen = false
       this.showGameScreen = true
+      this.delay = Math.floor(2000 + (Math.random() * 3000))
+      // console.log(this.delay)
     }
   }
 }
