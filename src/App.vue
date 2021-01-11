@@ -2,7 +2,7 @@
   <div class="start-screen">
     <h1 class="start-screen__title">Reaction Game</h1>
     <p class="start-screen__sub-title">Test your reaction time</p>
-    <div class="start-screen__start-btn">start game</div>
+    <button class="start-screen__start-btn">start game</button>
   </div>
 </template>
 
