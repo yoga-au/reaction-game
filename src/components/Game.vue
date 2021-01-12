@@ -38,7 +38,7 @@ export default {
 		react() {
 			clearInterval(this.timer)
 			this.$emit('end', this.reactionTime)
-			console.log(this.reactionTime)
+			// console.log(this.reactionTime)
 		}
 	}
 }

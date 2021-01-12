@@ -34,19 +34,21 @@ export default {
       this.showStartScreen = false
       this.showGameScreen = true
       this.delay = Math.floor(2000 + (Math.random() * 3000))
-      console.log(this.showGameScreen)
+      // console.log(this.delay)
     },
 
-    endGame(reactionTime, clickNow) {
+    endGame(reactionTime) {
       this.result = reactionTime
       this.showGameScreen = false
       this.showResult = true
-      console.log('clicked')
+      // console.log('clicked')
     },
 
     restart() {
+      this.delay = Math.floor(2000 + (Math.random() * 3000))
       this.showGameScreen = true
       this.showResult = false
+      // console.log(this.delay)
     }
   }
 }
