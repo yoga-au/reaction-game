@@ -5,7 +5,7 @@
     <button class="start-screen__start-btn" @click="startGame">Start Game</button>
   </div>
   <Game v-if="showGameScreen" :delay="delay" @end="endGame" />
-  <Result v-if="showResult" :finalResult="result" />
+  <Result v-if="showResult" :finalResult="result" @restart="restart" />
 </template>
 
 <script>
@@ -39,9 +39,14 @@ export default {
 
     endGame(reactionTime, clickNow) {
       this.result = reactionTime
-      this.showGameScreen = clickNow
+      this.showGameScreen = false
       this.showResult = true
       console.log('clicked')
+    },
+
+    restart() {
+      this.showGameScreen = true
+      this.showResult = false
     }
   }
 }

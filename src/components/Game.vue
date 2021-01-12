@@ -8,7 +8,7 @@
 export default {
 	data() {
 		return {
-			message: 'Click anywhere when the background color change',
+			message: 'Click anywhere when the color change',
 			timer: null,
 			reactionTime: 0,
 			clickNow: false,
