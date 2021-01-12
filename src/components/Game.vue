@@ -50,7 +50,8 @@ export default {
 		color: white;
 		background-color: #171c22;
 		text-align: center;
-		padding-top: 50vh;
+		padding-top: 45vh;
+		line-height: 161.8%;
 	}
 	.game-screen.white {
 		background-color: white;

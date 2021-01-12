@@ -66,26 +66,34 @@ export default {
     color: white;
     background-color: #171c22;
     text-align: center;
-    padding-top: 30vh;
+    padding-top: 25vh;
   }
   .start-screen__title{
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+    line-height: 161.8%;
   }
   .start-screen__sub-title{
     opacity: .4;
-    margin-bottom: 80px;
+    margin-bottom: 5rem;
+    line-height: 161.8%;
   }
   .start-screen__start-btn{
     border: 1px solid white;
     text-transform: uppercase;
     width: 250px;
     margin: 0 auto;
-    padding: 24px;
+    padding: 1.5rem;
     transition: all .2s ease-out;
   }
   .start-screen__start-btn:hover{
     border: 1px solid white;
     background-color: white;
     color: black;
+  }
+
+  @media (min-width: 420px) {
+    .start-screen {
+      padding-top: 30vh;
+    }
   }
 </style>

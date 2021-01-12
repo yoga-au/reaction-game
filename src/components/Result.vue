@@ -62,8 +62,8 @@ export default {
 		padding-top: 30vh;
 	}
 	.result-screen__result-box {
-		padding: 48px 32px;
-		margin: 24px auto 0;
+		padding: 3rem 2rem;
+		margin: 1.5rem auto 0;
 		/* background: #fd1e56;
 		color: black; */
 		width: 300px;
@@ -77,8 +77,8 @@ export default {
 		border: 1px solid white;
 		text-transform: uppercase;
 		width: 300px;
-		margin: 24px auto 0;
-		padding: 24px;
+		margin: 1.5rem auto 0;
+		padding: 1.5rem;
 		transition: all .2s ease-out;
 	}
 	.result-screen__restart-btn:hover {
